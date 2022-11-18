@@ -137,3 +137,4 @@ document.querySelector('.fa-xmark').onclick = () => {
 searchBar.addEventListener('click', () => {
 	searchContainer.classList.toggle('showSearchContainer')
 })
+
