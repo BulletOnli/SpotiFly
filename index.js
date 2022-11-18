@@ -84,11 +84,11 @@ let songs = [
 
 loadsong(songs[index])
 
-function loadsong(song) {
-	audioImg.src = song.img
-	audioTitle.textContent = song.title
-	bandname.textContent = song.band
-	audio.src = song.src
+function loadsong(e) {
+	audioImg.src = e.img
+	audioTitle.textContent = e.title
+	bandname.textContent = e.band
+	audio.src = e.src
 }
 
 function nextSong() {
@@ -118,7 +118,9 @@ function prevSong() {
 // Play custom music
 function songChoice(songNum) {
 	loadsong(songs[songNum])
+	index = songNum
 	audio.play()
+	console.log(songNum)
 
 	playBtn.classList.add('hide')
 	pauseBtn.classList.remove('hide')
